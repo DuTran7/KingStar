@@ -1,91 +1,131 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "./page.module.css";
+import HomePage from "@/components/pages/HomePage/HomePage";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/bundle";
+import { ThemeProvider } from "@mui/material";
+export const themeMUI = responsiveFontSizes(
+  createTheme({
+    palette: {
+      primary: {
+        main: "#11163d", // main
+      },
+      secondary: {
+        main: "#ddb654",
+      },
+      common: {
+        white: "#FFFFFF",
+        black: "#000000",
+      },
+      action: {
+        hover: "linear-gradient(to Right, #D2FF7C, #c1b435)",
+      },
+
+      divider: "#292929",
+    },
+    // Config: TYPOGRAPHY
+    typography: {
+      fontFamily: "montserrat",
+      h1: {
+        fontFamily: "montserrat",
+        fontWeight: 300,
+        fontSize: "66px",
+        lineHeight: 1,
+        fontStyle: "normal",
+      },
+      h2: {
+        fontFamily: "montserrat",
+        fontStyle: "normal",
+        fontWeight: 300,
+        fontSize: "22px",
+        lineHeight: 1.3,
+      },
+      h3: {
+        fontFamily: "montserrat",
+        fontWeight: 300,
+        fontSize: "40px",
+        lineHeight: 1.5,
+        fontStyle: "normal",
+      },
+      h4: {
+        fontFamily: "montserrat",
+        fontWeight: 300,
+        fontSize: "24px",
+        lineHeight: 1,
+        fontStyle: "normal",
+      },
+      h5: {
+        fontWeight: 300,
+        fontSize: "16px",
+        lineHeight: 1.75,
+      },
+      h6: {
+        fontWeight: 400,
+        fontSize: "12px",
+        lineHeight: 1.3,
+      },
+      caption: {
+        fontFamily: "montserrat",
+        fontWeight: 400,
+        fontSize: "18px",
+        lineHeight: 1.55,
+      },
+      body1: {
+        fontFamily: "montserrat",
+        fontSize: "14px",
+        fontWeight: 400,
+        lineHeight: 1.7,
+        letterSpacing: "0.02em",
+      },
+      body2: {
+        fontSize: "14px",
+        fontWeight: 400,
+        lineHeight: 1.42,
+      },
+      subtitle1: {
+        fontFamily: "montserrat",
+        fontSize: "8px",
+        fontWeight: 300,
+        lineHeight: 2,
+        letterSpacing: "0.32em",
+        textTransform: "uppercase",
+      },
+      subtitle2: {
+        fontSize: "36px",
+        fontWeight: 300,
+        lineHeight: 1.33,
+      },
+    },
+
+    components: {},
+    transitions: {
+      duration: {
+        shortest: 180,
+        shorter: 230,
+        short: 280,
+        standard: 330,
+        complex: 395,
+        enteringScreen: 255,
+        // recommended when something is leaving screen
+        leavingScreen: 225,
+      },
+    },
+  })
+);
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <ThemeProvider theme={themeMUI}>
+      <HomePage />{" "}
+    </ThemeProvider>
+  );
 }
