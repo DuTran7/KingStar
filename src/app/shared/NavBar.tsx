@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Image from "next/image";
 import { Divider, Drawer, Link, List, ListItem, ListItemButton, ListItemText, Stack } from "@mui/material";
-import { themeMUI } from "../page";
+import { themeMUI } from "@/theme";
 
 const pagesL = [
   {

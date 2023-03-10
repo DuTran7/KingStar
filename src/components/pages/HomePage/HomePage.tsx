@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Carousel } from "antd";
 import MediaCard from "@/app/shared/ProductCard";
 import Image from "next/image";
-import { themeMUI } from "@/app/page";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { themeMUI } from "@/theme";
 const contentStyle: React.CSSProperties = {
   margin: 0,
   color: "#fff",
@@ -131,7 +131,7 @@ export default function HomePage() {
             VIỆT NAM
           </Typography>
           <Typography
-            variant='body'
+            variant='body1'
             fontSize={{
               xs: "1.4rem",
               md: "2.5rem",
@@ -242,7 +242,7 @@ export default function HomePage() {
             <i>Hướng tới chuỗi giá trị bền vững</i>
           </Typography>
           <Typography
-            variant='body'
+            variant='body1'
             fontSize={"1.1rem"}
             color={"white"}
             textAlign={"center"}
@@ -290,7 +290,7 @@ export default function HomePage() {
                   >
                     {item.value}
                   </Typography>
-                  <Typography color={"common.white"} variant='body'>
+                  <Typography color={"common.white"} variant='body1'>
                     {item.label}
                   </Typography>
                 </Stack>
@@ -315,15 +315,15 @@ export default function HomePage() {
                 <Typography variant='h5'>TRỤ SỞ CHÍNH</Typography>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <LocationOnIcon fontSize={"small"} />
-                  <Typography variant='body'>Ngô Quyền, Hàng Bài, Hà Nội</Typography>
+                  <Typography variant='body1'>Ngô Quyền, Hàng Bài, Hà Nội</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <PhoneEnabledIcon fontSize={"small"} />
-                  <Typography variant='body'>0832 244 321</Typography>
+                  <Typography variant='body1'>0832 244 321</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <LocalPostOfficeIcon fontSize={"small"} />
-                  <Typography variant='body'>gejaxn@gela.com.vn</Typography>
+                  <Typography variant='body1'>gejaxn@gela.com.vn</Typography>
                 </Stack>
               </Stack>
             </Stack>
@@ -334,15 +334,15 @@ export default function HomePage() {
                 <Typography variant='h5'>CHI NHÁNH HÀ NỘI</Typography>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <LocationOnIcon fontSize={"small"} />
-                  <Typography variant='body'>Ngô Quyền, Hàng Bài, Hà Nội</Typography>
+                  <Typography variant='body1'>Ngô Quyền, Hàng Bài, Hà Nội</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <PhoneEnabledIcon fontSize={"small"} />
-                  <Typography variant='body'>0832 244 321</Typography>
+                  <Typography variant='body1'>0832 244 321</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <LocalPostOfficeIcon fontSize={"small"} />
-                  <Typography variant='body'>gejaxn@gela.com.vn</Typography>
+                  <Typography variant='body1'>gejaxn@gela.com.vn</Typography>
                 </Stack>
               </Stack>
             </Stack>
@@ -353,15 +353,15 @@ export default function HomePage() {
                 <Typography variant='h5'>CHI NHÁNH HỒ CHÍ MINH</Typography>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <LocationOnIcon fontSize={"small"} />
-                  <Typography variant='body'>Ngô Quyền, Hàng Bài, Hà Nội</Typography>
+                  <Typography variant='body1'>Ngô Quyền, Hàng Bài, Hà Nội</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <PhoneEnabledIcon fontSize={"small"} />
-                  <Typography variant='body'>0832 244 321</Typography>
+                  <Typography variant='body1'>0832 244 321</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} columnGap={1}>
                   <LocalPostOfficeIcon fontSize={"small"} />
-                  <Typography variant='body'>gejaxn@gela.com.vn</Typography>
+                  <Typography variant='body1'>gejaxn@gela.com.vn</Typography>
                 </Stack>
               </Stack>
             </Stack>
